@@ -1,56 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Star Wars Quiz</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="menu">
-        <span style="float:left">Highscores</span>
-        <span style="float: right;">Timer<span class="time"></span></span>
+      <a href="./highscore.html"
+        ><span style="float: left;">Highscores</span></a
+      >
+      <span style="float: right;">Timer<span class="time"></span></span>
     </div>
 
-    <!-- <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="highscore.html">Highscores</a>
-    </nav>
-   -->
-<h1>Star Wars Trivia</h1>
+    <h1>Star Wars Trivia</h1>
     <div class="container">
-    
-    <div id="main">
-        <p>This trivia game will test you Star Wars knowledge.
-            The sith will be timimg this contest.
-            So be careful it might be a trick.
-            Here are the rules, and MAY THE FORCE BE WITH YOU!!</p>
-    </div>
-
-    <div>
-        <div class="rules">
-            <ol> Rules:
-               <li>You have 1 minute to complelte this task.</li>
-               <li>Every wrong answer will results in 10 seconds run off, HA HA HA, for the dark side is UNFORGIVING!!....</li>
-               <li>You will recieve your pathetic score at the end.</li>
-               <li>And if you fail?...There will be one less Jedi in the galaxy HHAHAHAHA!!!!</li>
-            </ol>
+      <div id="start-screen" class="start">
+        <div id="main">
+          <p>
+            This trivia game will test you Star Wars knowledge. The sith will be
+            timimg this contest. So be careful it might be a trick. Here are the
+            rules, and MAY THE FORCE BE WITH YOU!!
+          </p>
         </div>
-    </div>
 
-    <div>
-        <button type="button">BEGIN!</button>
-    </div>
-    </div>
+        <div>
+          <div class="rules">
+            
+              Rules:
+              <p>You have 1 minute to complelte this task.</p>
+              <p>
+                Every wrong answer will results in 10 seconds run off, HA HA HA,
+                for the dark side is UNFORGIVING!!....
+              </p>
+              <p>You will recieve your pathetic score at the end.</p>
+              <p>
+                And if you fail?...There will be one less Jedi in the galaxy
+                HHAHAHAHA!!!!
+              </p>
+              <button type="button">BEGIN!</button>
+          </div>
+        </div>
+      </div>
 
-    <div id="quiz"></div>
+      <div id="quiz" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+      </div>
 
+      <div id="final-page" class="hide">
+        <p>
+          You barely finshed... you worhtless jedi scum! Here's your
+          results:<span id="final-score"></span>
+        </p>
+        <p>
+          enter your initials: <input type="text" id="initials" max="3" />
+          <button id="Submit">Submit</button>
+        </p>
+      </div>
+      <div id="feedback" class="feedback hide"></div>
     </div>
     <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>
