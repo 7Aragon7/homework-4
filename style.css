@@ -18,7 +18,7 @@ h1 {
     text-align: center;
 }
 
-.main {
+#main {
     font-size: large;
     font-weight: bold;
     color: chartreuse;
