@@ -1,5 +1,6 @@
 body {
     background-image: url(https://vignette.wikia.nocookie.net/starwars/images/c/cc/Star-wars-logo-new-tall.jpg/revision/latest?cb=20190313021755);
+    width: auto;
 }
 
 .menu {
@@ -27,6 +28,7 @@ h1 {
 }
 
 .rules {
+    padding-left: 115px;
     font-weight: bold;
     font-size: large;
     margin-top: 325px;
