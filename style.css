@@ -4,6 +4,9 @@ body {
 }
 
 .menu {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 50px;
     color: magenta;
 }
 
